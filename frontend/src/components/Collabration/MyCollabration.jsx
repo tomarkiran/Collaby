@@ -17,7 +17,7 @@ const MyCollabrations = () => {
     try {
       if (user && user.role === "Collaborator") {
         axios
-          .get("http://localhost:4000/api/v1/collabration//collabrator/getAll", {
+          .get("https://collaby.onrender.com/api/v1/collabration//collabrator/getAll", {
             withCredentials: true,
           })
           .then((res) => {
@@ -25,7 +25,7 @@ const MyCollabrations = () => {
           });
       } else {
         axios
-          .get("http://localhost:4000/api/v1/collabration/influencer/getAll", {
+          .get("https://collaby.onrender.com/api/v1/collabration/influencer/getAll", {
             withCredentials: true,
           })
           .then((res) => {
@@ -44,7 +44,7 @@ const MyCollabrations = () => {
   const deleteCollabration = async (id) => {
     try {
        await axios
-        .delete(`http://localhost:4000/api/v1/collabration/delete/${id}`, {
+        .delete(`https://collaby.onrender.com/api/v1/collabration/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

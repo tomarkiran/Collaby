@@ -10,7 +10,7 @@ import axios from 'axios';
 
 //   useEffect(()=> {
 //     try {
-//       axios.get("http://localhost:4000/api/v1/collab/getAll", {withCredentials: true}).then((res) => {
+//       axios.get("https://collaby.onrender.com/api/v1/collab/getAll", {withCredentials: true}).then((res) => {
 //         setCollabs(res.data);
 //       });
       
@@ -47,7 +47,7 @@ const Collabs = () => {
 
   const fetchCollabs = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/v1/collab/getAll", {
+      const response = await axios.get("https://collaby.onrender.com/api/v1/collab/getAll", {
         params: {
           country,
           city,

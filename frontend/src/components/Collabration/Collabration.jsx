@@ -39,7 +39,7 @@ const Collabration = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/collabration/post",
+        "https://collaby.onrender.com/api/v1/collabration/post",
         formData,
         {
           withCredentials: true,

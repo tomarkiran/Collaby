@@ -36,7 +36,7 @@ const PostCollab = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/v1/collab/post",
+        "https://collaby.onrender.com/api/v1/collab/post",
         fixedPayment.length >= 2
           ? {
               title,

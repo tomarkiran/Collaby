@@ -17,7 +17,7 @@ const MyCollabs = () => {
     const fetchCollabs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/collab/getmyPosts",
+          "https://collaby.onrender.com/api/v1/collab/getmyPosts",
           { withCredentials: true }
         );
         setMyCollabs(data.myCollabs);
@@ -47,7 +47,7 @@ const MyCollabs = () => {
   const handleUpdateCollab = async (collabId) => {
     const updatedCollab = mycollabs.find((collab) => collab._id === collabId);
     await axios
-      .put(`http://localhost:4000/api/v1/collab/update/${collabId}`, updatedCollab, {
+      .put(`https://collaby.onrender.com/api/v1/collab/update/${collabId}`, updatedCollab, {
         withCredentials: true,
       })
       .then((res) => {
@@ -62,7 +62,7 @@ const MyCollabs = () => {
   //Function For Deleting Collab
   const handleDeleteCollab = async (collabId) => {
     await axios
-      .delete(`http://localhost:4000/api/v1/collab/delete/${collabId}`, {
+      .delete(`https://collaby.onrender.com/api/v1/collab/delete/${collabId}`, {
         withCredentials: true,
       })
       .then((res) => {
